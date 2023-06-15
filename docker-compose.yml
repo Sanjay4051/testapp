@@ -3,7 +3,8 @@ version: '3'
 services:
     nodejs-app:
         build:
-          context: ./nodedocker_app
+          context: .
+          dockerfile: nodejsdockerfile
         container_name: nodejsserver
         hostname: nodejsserver
         ports:
@@ -24,7 +25,8 @@ services:
             - example-net 
     nginx:
         build:
-          context: ./nginx
+          context: .
+          dockerfile: nginxDockerFile
         container_name: nginx
         hostname: nginx
         ports:
